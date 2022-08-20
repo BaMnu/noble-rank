@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        List<Person> noblePeople = new ArrayList<>();
+        Set<Person> noblePeople = new TreeSet<>(new PersonSurnameNobilityComparator());
         noblePeople.add(new Person("Jason", "Brown", 33));
         noblePeople.add(new Person("Trevor", "Rose Parker Stone", 23));
         noblePeople.add(new Person("Tilda", "Rose Parker Stone", 60));
@@ -14,12 +14,9 @@ public class Main {
         int howNoble = 0;
         System.out.println("Rankings of nobility. From the noblest [1] to the least noble [7].");
 
-        Collections.sort(noblePeople, new PersonSurnameNobilityComparator());
         for (Person person : noblePeople) {
             howNoble++;
             System.out.println(howNoble + ". " + person);
         }
-
-//        System.out.println(noblePeople);
     }
 }
