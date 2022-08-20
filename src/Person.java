@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public class Person implements Comparable<Person> {
+public class Person <Person> {
     private String name;
     private String surname;
     private int age;
@@ -26,7 +26,6 @@ public class Person implements Comparable<Person> {
 
     public void setSurname(String surname) {
         this.surname = surname;
-
     }
 
     public String getSurname() {
@@ -39,15 +38,6 @@ public class Person implements Comparable<Person> {
 
     public int getAge() {
         return age;
-    }
-
-    @Override
-    public int compareTo(Person o) {
-        if (o.words < words) {
-            return -1;
-        } else if (o.words > words) {
-            return 1;
-        } else return Integer.compare(age, o.age);
     }
 
     public String toString() {
