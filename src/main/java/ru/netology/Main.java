@@ -1,3 +1,5 @@
+package ru.netology;
+
 import java.util.*;
 import java.util.function.Predicate;
 

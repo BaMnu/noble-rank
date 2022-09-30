@@ -1,4 +1,4 @@
-import java.util.Objects;
+package ru.netology;
 
 public class Person {
     private String name;
